@@ -1,0 +1,830 @@
+---
+title: 'Programming with R'
+author: "Nicholas Sim"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  xaringan::moon_reader:
+    css: ["scrollable.css", "xaringan-themer.css"]
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: solarized-light
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+font_adjustment: -2
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(fig.height = 5.5, fig.width = 9, fig.align = "center")
+knitr::opts_knit$set(root.dir = "C:\\Users\\nicho\\OneDrive\\Documents\\Teaching\\ANL501\\Course Content\\course_notes\\current\\Seminar 1")
+
+xaringanExtra::use_panelset()
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
+
+library(tinytex)
+```
+
+```{r xaringan-themer, include = FALSE, warning = FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#0492C2",
+  secondary_color = "#F1DE67",
+  inverse_header_color = "#464a53",
+  black_color = "#464a53",
+  code_highlight_color = "#f1de67",
+  header_font_google = google_font(family = "Roboto"),
+  text_font_google   = google_font("Roboto", "300", "300i"),
+  code_font_google   = google_font("Source Code Pro"),
+  code_font_size = "20px",
+  title_slide_text_color = "#FFFFFF",
+  title_slide_background_color = "#92cdcd",
+ # title_slide_background_image = "https://raw.githubusercontent.com/nicholas-sim/anl501/main/maldives1.jpg",
+  title_slide_background_size = "contain",
+  base_font_size = "24px",
+  header_h1_font_size = "2rem",
+  header_h2_font_size = "1.75rem",
+  header_h3_font_size = "1.5rem",
+  extra_css = list(
+    "h1" = list("margin-block-start" = "0.4rem", 
+                 "margin-block-end" = "0.4rem"),
+    "h2" = list("margin-block-start" = "0.4rem", 
+                 "margin-block-end" = "0.4rem"),
+    "h3" = list("margin-block-start" = "0.4rem", 
+                 "margin-block-end" = "0.4rem"),
+    ".small" = list("font-size" = "90%"),
+    ".midi" = list("font-size" = "85%"),
+    ".large" = list("font-size" = "200%"),
+    ".xlarge" = list("font-size" = "600%"),
+    ".hand" = list("font-family" = "'Gochi Hand', cursive",
+                   "font-size" = "125%"),
+    ".task" = list("padding-right"    = "10px",
+                   "padding-left"     = "10px",
+                   "padding-top"      = "3px",
+                   "padding-bottom"   = "3px",
+                   "margin-bottom"    = "6px",
+                   "margin-top"       = "6px",
+                   "border-left"      = "solid 5px #F1DE67",
+                   "background-color" = "#F1DE6750"),
+    ".pull-left" = list("width" = "49%",
+                        "float" = "left"),
+    ".pull-right" = list("width" = "49%",
+                         "float" = "right"),
+    ".pull-left-wide" = list("width" = "70%",
+                             "float" = "left"),
+    ".pull-right-narrow" = list("width" = "27%",
+                                "float" = "right"),
+    ".pull-left-narrow" = list("width" = "27%",
+                               "float" = "left"),
+    ".pull-right-wide" = list("width" = "70%",
+                              "float" = "right") 
+    )
+  )
+```
+
+
+
+# Topics
+
+1. Functions
+
+2. Lists
+
+3. Flow Controls
+
+4. Writing a Function
+
+
+
+---
+# List
+
+---
+### List
+
+A **list** is a collection of objects. For example, consider a vector `vec` and a matrix `mat`
+
+```{r }
+vec <- 1:5
+mat <- matrix(1:12, nrow=3)
+```
+
+We may combine them into a list called `mylist` using the `list()` function:
+
+```{r }
+mylist <- list(vec,mat)
+```
+
+---
+### List Referencing 
+
+An item in a list is indexed by **double** square brackets. For instance, let's print out `mylist`
+```{r }
+print(mylist) 
+```
+We have two list items, indexed by `[[1]]` and `[[2]]` 
+
+
+---
+### Retrieving an Item from a List
+
+To retrieve an item from a list, we pass the item index into **double** square brackets. For instance, to retrieve `vec` from `mylist`, we type
+
+```{r }
+mylist[[1]] 
+```
+
+To retrieve `mat` from `mylist`, we type
+
+```{r }
+mylist[[2]] 
+```
+
+
+---
+### Single Vs Double Brackets
+What if you pass the item index into **single** square brackets? 
+
+In this case, the item is returned to you **as a list**, not as the item in its original class. For instance,
+
+```{r }
+mylist[2] 
+```
+is still a list as the matrix `mat` is returned as the first item of a list (i.e. `[[1]]`). 
+
+
+---
+### Naming the Items in a List
+
+To name each item in the list, we specify the item's name in the `list()` function itself, just like how we would call out the name of an input in a function.
+
+.pull-left[ 
+For example, we assign `my.vec` as the name for  `vec` and `my.mat` as the name for `mat` in the list below:
+]
+.pull-right[
+```{r }
+mynamedlist <- list(my.vec = vec, my.mat = mat)
+```
+]
+.pull-left[
+When the items are named, they **can be referenced** by the using `$` symbol. 
+
+For instance, notice that the first item in `mynamedlist` is now `$my.vec` and the second item is now `$my.mat`:
+]
+.pull-right[
+```{r }
+mynamedlist 
+```
+]
+
+---
+### Retrieving Named Items from a List
+Therefore, to retrieve `my.vec` from `mynamedlist`, we may append the latter with `$my.vec`. 
+
+```{r }
+mynamedlist$my.vec 
+```
+
+
+---
+### Slicing Notation
+Finally, we may apply vector/matrix filtering or slicing as before. For instance, to select Rows 1 to 2 and Columns 3 to 4 from `my.mat`:
+
+```{r }
+mynamedlist$my.mat[1:2,3:4] 
+```
+
+
+---
+### Single Vs Double Brackets for Retrieving Named Items
+
+Recall that passing in an item index into **single** square brackets returns the item as a list. To retrieve the item itself (and not as a list), we should pass the item index into **double** square brackets.
+
+.pull-left[ 
+For a list with named items, the same principle applies. If the item's name is passed into single square brackets, a list will be returned:
+]
+.pull-right[
+```{r }
+mynamedlist['my.vec'] 
+```
+]
+.pull-left[
+If the item's name is passed into double square brackets, the item itself will be returned (notice that there is no `$my.vec`):
+]
+.pull-right[
+```{r }
+mynamedlist[['my.vec']] 
+```
+]
+
+---
+# Flow Controls
+
+
+---
+### Flow Controls
+
+Commands that control the flow or sequence of the tasks to be executed are called **flow controls**.
+
+Examples of flow controls are the `if`, `else if` and `else` statements (Section 3.2). These statements specify a set of conditions that determine whether a certain task should be implemented and the sequence in which the codes are to be executed.
+
+Other flow controls are the `for` loop (Section 3.3) and the `while` loop (Section 3.4).
+
+Flow controls rely on conditioning statements, which in turn generate `TRUE` or `FALSE` values. 
+
+The code will be executed if the conditioning statement returns a `TRUE` value, and will not be executed if otherwise.
+
+
+
+---
+### Logical Operators
+
+Logical operators return a `TRUE` or `FALSE` depending on whether certain statements or conditions are met. `TRUE` or `FALSE` are also known as booleans.
+
+The following logical operators are commonly used:
+
+```{r, eval=F}
+&  # AND
+|  # OR
+!  # NOT  
+```
+
+
+---
+### The & (AND) Operator
+
+The & operator returns `TRUE` if **all** the conditions are true, and returns `FALSE` if at least one condition is false. For instance, consider
+
+```{r}
+x <- 10 
+y <- 20
+```
+
+
+.pull-left[
+It is true that both `x` **and** `y` are greater than 9. Therefore, the conditioning statement here returns `TRUE`.
+]
+.pull-right[
+```{r}
+x > 9 & y > 9
+```
+]
+.pull-left[
+Next, since `y` is greater than 10 **and** `x` is not greater than 10 (`x` is equal to 10), the conditioning statement here returns `FALSE` (as `x > 10` is false). For `x > 10 & y > 10` to return `TRUE`, `x > 10` and `y > 10` must both be true, which is not the case. 
+]
+.pull-right[
+```{r}
+x > 10 & y > 10
+```
+]
+
+
+
+---
+### The | (OR) Operator
+
+The | operator (vertical pipe) returns `TRUE` if at least one condition is true. For instance, the conditioning statement
+```{r}
+x > 10 | y > 10
+```
+returns `TRUE` because `y > 10` is true even though `x > 10` is not (we need at least one statement to be true).
+
+The | operator returns `FALSE` if none of the conditions are true. For instance, `x` and `y` are both not greater than 30. Therefore,
+
+```{r}
+x > 30 | y > 30
+```
+
+returns `FALSE`.
+
+
+---
+### The ! (NOT) Operator
+
+The ! operator reverses the `TRUE` or `FALSE` value of a conditioning statement.
+
+For instance, it is true that `x` is greater than 5. Thus, `x > 5` returns `TRUE`. 
+
+NOT `x > 5`, i.e. `!(x > 5)`, reverses the `TRUE` condition. Therefore, `!(x > 5)` returns `FALSE`:
+
+```{r}
+x > 5
+!(x > 5) # Reverses the TRUE value
+```
+
+---
+### Example: NOT Operator
+As another example,
+
+```{r}
+x > 30 | y > 30
+!(x > 30 | y > 30) # Reverse the FALSE value
+```
+
+---
+### The `if`, `elseif` and `else` Statements
+
+The `if`, `else if` and `else` statements allow us to execute a specific set of commands if certain conditions are met.
+
+The condition for these statements is specified within a set of parenthesis following `if`, `else if`, or `else`. 
+
+The commands we wish to execute will be enclosed by a set of braces { } that immediately follow from the condition itself.
+
+
+---
+### The `if`, `elseif` and `else` Statements
+
+Let's consider the following example. Suppose we want to report on the current weather, measured in degrees Celsius.
+
+If the temperature is greater than 34&deg;C, print 
+
+    `The weather is very hot. Please stay indoors.`
+
+If the temperature is between 29&deg;C and 34&deg;C, print 
+
+    `The weather is hot. Please use sunscreen if you need to be outdoors.`
+
+If the temperature is less than 29&deg;C, print 
+
+    `The weather is relatively mild.`
+
+---
+### The `if` statement
+
+The condition for the `if`, `else if`, or `else` statement is specified within a set of parenthesis following `if`, `else if`, or `else`. 
+
+If the condition is met, the commands we wish to execute will be enclosed by a set of braces `{ }`.
+
+Let's consider the simplest example of using the `if` statement.
+
+```{r}
+temp.weather = 32 # the temperature is current 32 degrees C.
+
+if (temp.weather >34){print('The weather is very hot. Please stay indoors.')}
+```
+
+As the condition is not met, the command `print('The weather is very hot. Please stay indoors.')` is not executed. Thus, there is no output.
+
+
+
+---
+### The `if` statement
+
+Now, if the temperature is 35&deg;C, it satisfies the condition `temp.weather >34`. Therefore, the statement will be printed.
+
+```{r}
+temp.weather = 35 # the temperature is current 32 degrees C.
+
+if (temp.weather >34){print('The weather is very hot. Please stay indoors.')}
+
+```
+
+
+---
+### The  `else if` Statement
+
+The `else if` statement specifies another set of condition if the earlier `if` statement is not met.
+
+Consider the example:
+
+```{r}
+temp.weather = 32 # the temperature is current 32 degrees C.
+
+if (temp.weather > 34){print('The weather is very hot. Please stay indoors.')
+} else if (temp.weather > 28 & temp.weather < 35){print('The weather is hot. Please use sunscreen if you need to be outdoors.')}
+
+
+```
+Here, the `if` statement is not met as the temperature is 32&deg;C, which is not above 34&deg;C.
+
+The `else if` statement is met because 32&deg;C is between 28&deg;C and 34&deg;C.
+
+**Remark**: To include a third, fourth, etc. condition, just add another `else if` statement.
+
+
+
+
+
+---
+### The `else` Statement
+
+The `else` statement executes a set of commands for all remaining cases not covered by the `if` and `else if` conditions. In other words, you may think of it as: if none of the conditions we specify are met, execute the commands for the `else` statement.
+
+
+Let the current temperature be 27&deg;C. 
+
+```{r}
+temp.weather = 27 # the temperature is current 32 degrees C.
+
+if (temp.weather > 34){
+  print('The weather is very hot. Please stay indoors.')
+} else if (temp.weather > 28 & temp.weather < 35){
+  print('The weather is hot. Please use sunscreen if you need to be outdoors.')
+  } else{print('The weather is relatively mild')} 
+
+```
+
+---
+### The `ifelse()` Function
+
+The `ifelse()` function is a shortcut for assigning outcomes to a `TRUE` or `FALSE` value based on a single test statement. The syntax is
+
+```{r echo=T, eval = F}
+ifelse(test_expression, x, y)
+```
+where `x` is the assigned outcome if `test_expression` is `TRUE` and `y` is the assigned outcome if `test_expression` is `FALSE`.
+
+
+---
+### Example: The `ifelse()` Function
+For instance, suppose we have a vector containing the attendance record of 5 students. The attendance record is stored as a string vector containing `present` or `absent`.
+
+```{r}
+attendance <- c('absent', 'present', 'present', 'absent', 'present' )
+```
+
+Let's convert `absent` to 0 and `present` to 1 using the `ifelse()` function, and call this new variable `attendance.dummy`:
+
+```{r}
+attendance.dummy <- ifelse(attendance == "present", 1, 0)
+
+print(attendance.dummy)
+```
+
+---
+### Exercise
+
+Mary has two children - Joaqium and Elizabeth. Let's construct a vector, called `mary.children`, that records their gender, where its first element is `B` and the second element is `G`.
+
+```{r}
+mary.children <- c('B', 'G')
+```
+
+Let's do the following using `if`, `else if` and `else` statements.
+
+If Mary has no daughters, print `Mary's children are both boys.`
+
+If Mary has one daughter, print `Mary has one girl and one boy.`
+
+If Mary has two daughters, print `Mary's children are both girls.`
+
+---
+### Possible Solution
+
+To carry out this task, we need to count the number of `G` in the vector `mary.children`. To do so, we may simply sum a test condition. For example, from the code below, we know that Mary has one daughter only.
+
+```{r}
+mary.girl <- sum(mary.children == 'G')
+mary.girl
+```
+.pull-left[
+Using `mary.girl`, which captures the number of daughter/s Mary has, we may write the `if`, `else if` and `else` statements to generate the desired print out.]
+
+.pull-right[
+```{r echo=T}
+if (mary.girl == 0){print("Mary's children are both boys.")
+} else if (mary.girl == 1){ print("Mary has one girl and one boy.") # Use double quotation because the single quotation is used in Mary's
+    } else {print("Mary's children are both girls.")}
+```
+]
+
+
+---
+### Exercise
+
+Use the random normal generator function, `rnorm()`, to generate 20 observations from the standard normal distribution. Before you do so, type in the command `set.seed(100)`, so that the random normal generator generates the same 20 values that we observe in this exercise.
+
+Save the values to the object `vec1`. Use `ifelse()` to replace the negative values in `vec1` with zero. Save the output to `vec2`.
+
+```{r echo=F}
+set.seed(100)
+
+vec1 <- rnorm(20)
+vec2 <- ifelse(vec1>0,vec1,0)
+```
+
+You should observe that `vec2` is
+
+```{r}
+vec2
+```
+
+---
+### The `for` Loop
+
+The `for` loop is useful for repeating the same set of operations for a different parameter value. The basic syntax  is
+
+```{r echo=T, eval=F}
+for(temp.var in vector){
+    codes
+  }
+```
+
+In the conditioning statement contained in the parenthesis, we specify the vector (here, `vector`) where its values are to be looped over.
+
+The `for` loop will assign a value in `vector` to a temporary variable called `temp.var`, which is passed into the code block contained in the braces.
+
+This procedure will repeat for the next value in `vector` until it reaches the last value in `vector`, after which, the loop will terminate. Once the loop is completed, `temp.var` will be removed.
+
+You may call `temp.var` using other names (common ones are `i`, `j`, `var`, etc.).
+
+---
+### Example
+
+Use the `for` loop to add 1 to each element in the vector `vec2`, which presently contains the values 1 to 5. Save the output to a new vector called `vec2.new`.
+
+```{r}
+vec2 <- seq(1,5)
+
+vec2.new <- NULL # create an empty vector
+
+for(temp.var in vec2){
+  
+  vec2.new <- append(vec2.new,temp.var+1)  
+  # Append the new value to vec2.new
+  # The initial value of vec2.new is NULL. 
+  # We append the NULL value in vec2.new with temp.var + 1, which is 2.
+  # So vec2.new now contains the value c(2).
+  # In the next iteration, we append the 2 value in vec2.new with temp.var+ 1, which is 3. 
+  # So vec2.new now contains the values c(2,3). And so on.
+  
+}
+
+print(vec2.new)
+```
+
+---
+Rather than looping over a vector like `vec2`, we may loop over a pre-defined sequence (which is itself a vector).
+
+Consider a vector `vec3` with 20 values. Let's add the number 55 to its first 10 elements.
+
+```{r}
+vec3 <- rnorm(20)
+print(vec3)
+for (i in 1:10) {
+    vec3[i] <- vec3[i] + 55
+  }
+print(vec3)
+
+```
+
+---
+### Nested `for` Loops
+
+A `for` loop can be included (or nested) within another `for` loop (i.e. a loop within a loop).
+
+For example, suppose we have a 4$\times$3 matrix, called `mat1`. 
+
+```{r}
+mat1 <- matrix(1:12, nrow=4)
+print(mat1)
+```
+
+
+---
+### Nested `for` Loops
+
+Let's print out the values of the matrix corresponding to each row and column of `mat1`.
+```{r}
+for(i in 1:3){
+  for(j in 1:4){
+    print(paste("The element in row", j, "and column", i, "of mat1 is:", mat1[j,i]))
+      }
+  }
+```
+
+---
+### Exercise
+
+Generally, we may nest a series of flow controls. As an exercise, let's nest an `if` statement within a `for` loop. 
+
+First, let's generate a vector of 20 random numbers, called `vec4`, from the standard normal distribution (use the `rnorm()` function). Set the seed as 100 (use ` set.seed(100)`). 
+
+Create a loop over the 20 elements in `vec4` such that if an element in `vec4` is negative, replace it with `0`. 
+
+You should obtain a vector that looks like this:
+
+
+```{r echo=F}
+# Step 1
+vec4 <- rnorm(20)
+set.seed(100)
+
+# Step 2
+for(i in 1:length(vec4)){
+    if (vec4[i]<0) { vec4[i] <- 0}
+}
+print(vec4)
+
+```
+
+
+
+---
+###  The `while` Loop
+
+.pull-left[
+The `while` loop executes a set of codes until the specified condition is no longer satisfied. For example, suppose `x` is equal to `0`. Let's keep adding 1 to `x` until it reaches 10.
+]
+.pull-right[
+```{r}
+x <- 0
+
+while(x<10){
+  x <- x + 1
+  print(x)
+}
+# The code breaks if the condition, x < 10, becomes false.
+```
+]
+
+---
+### Exercise
+
+The number `x` is the minimum integer such that `log(x)` (natural log) is greater than 2.4. Write a while loop to find `x`.
+
+Hint: 1) Initialize `x` to 0. Initialize `a`, which will represent `log(x)`, to zero. 2) While `a` is less than 2.4, add `1` to `x`. 3) Break the `while` loop if `a` is greater than 2.4.
+```{r echo=F}
+a <- 0
+x <- 0
+
+while (a < 2.4){
+  if (a > 2.4){
+    break } 
+  else{
+    x <- x + 1
+    a <- log(x)
+    print(paste("x = ", x, "and log(x) = ", a ))}
+}
+```
+
+
+---
+# Functions
+
+
+---
+###  Writing A Function
+
+The basic syntax for writing a function in R is
+
+```{r}
+hello <- function(x){  
+    paste("Hello", x)
+  }
+```
+The function command has three parts:
+
+1. The name of the function, which is `hello`
+2. The input of the function. Here, we call it `x`
+3. What the function does, which is contained in the set of braces `{}`
+
+---
+###  Example: A Function with a Single Output
+
+The function `function(x){paste("Hello",x)}` is assigned to the object name `hello`. `hello` is a function with one input, `x`. It has one output, `paste("Hello",x)`. The function name is called `hello`. To use `hello`, we simply pass in something into `hello()`.
+
+
+```{r}
+x <- "John Smith"
+hello(x)
+
+y <-2
+hello(y)
+``` 
+
+---
+###  Example: A Function with  Multiple Outputs
+
+To output multiple items from a function, we need to bind them together in a single list. 
+
+.pull-left[
+For example, let's write a function that produces a data frame with artificial data generated from a random chi-square distribution and a vector containing some summary statistics.
+
+Note that 20 is the default value for `n` and 5 for `dof` (degrees of freedom). If we call `datgen()` without specifying any input values, these will be the default values for `n` and `dof`.
+]
+.pull-right[
+```{r}
+datgen <- function(n = 20, dof = 5){
+  df <- cbind(rchisq(n = n, df = dof),
+              rchisq(n = n, df = dof), 
+              rchisq(n = n, df = dof))  
+  means <- colMeans(df) 
+  out <- list(df = as.data.frame(df), means = means)
+}
+```
+]
+
+---
+###  Saving and Importing Functions from a Source File
+
+Suppose we wrote a bunch of functions that will be used in several documents. Rather than repeatedly building these functions in each of our script or markdown file, we may instead save these functions as a `"source"` script. 
+
+To "import" our functions, say, stored in `myfunc.r`, we simply call
+```{r eval=F}
+source(myfunc.r)
+```
+
+Besides R source scripts, we may import non-R scripts like such as C++ scripts as well using the appropriate packages (such as `rcpp`).
+
+
+
+
+---
+### Exercise
+
+Construct a square root function named `root`. In other words, `root(4)` should return the value of 2.
+
+```{r echo = F}
+root <- function(x){sqrt(x)} 
+```
+
+
+
+---
+# Appendix
+
+---
+### Function
+
+A function is a command that performs a specific task when provided with a set of inputs. It is represented by `functionname()`, where the inputs are entered into the *parenthesis*.
+
+An example of a function is `matrix()`. Below, a $10\times 5$ matrix is constructed using the sequence from 1 to 50. 
+
+```{r}
+mat1 <- matrix(1:50, nrow=10)
+```
+
+The first input (i.e. argument) specifies the values to populate the matrix, and the second input specifies the number of rows.
+
+
+
+---
+### Applying Functions Iteratively
+
+We may apply functions iteratively (i.e. apply a function on a function). For example, let's construct `mat2`, a $10\times 5$ matrix, by populating it with random numbers generated from a normal distribution (with a mean of 1 and standard deviation of 2):
+
+```{r}
+set.seed(1000)
+mat2 <- matrix(rnorm(50, mean = 1, sd =2), nrow=10)
+```
+
+Let's apply the `head()` function on `mat2` to view the first six rows, which is the *default* number of rows returned by `head()`:
+
+```{r}
+head(mat2) 
+```
+
+
+---
+### Applying Functions Iteratively
+
+To view the first 3 rows instead (than the default of 6 rows), we specify the second argument `n` in `head()` as 3:
+
+```{r}
+head(mat2, n=3) 
+```
+
+
+---
+### Help File
+
+We may retrieve a function's help file by prefixing its name with the question mark "`?`" symbol. For instance, to open the help file for the `tail()` function: 
+
+```{r help.3, eval=FALSE}
+?tail
+```
+
+The help file tells us that `tail()` has two inputs (i.e. arguments): 1) `x`, a matrix or data frame that we want `tail()` to read, and 2) `n`, an integered parameter specifying the last `n`  number of rows of the data to be displayed.
+
+We may also use the `help()` function to pull up the help file:
+
+```{r eval=FALSE}
+help(tail)
+```
+
+
+
+---
+### Mandatory and Optional Function Inputs
+
+Each input or argument of a function has an input name. Some inputs are mandatory, some are not. For example, in `ggplot()` function,
+
+```{r, eval=FALSE}
+ggplot(data = ourdata, 
+       mapping = aes(x = xvar, y = yvar))
+```
+there are two mandatory inputs. The first input is `data` and the second input is `mapping`. The names of the input arguments help the `ggplot()` function to differentiate the objects that are passed in as inputs.
+
+
+
+---
+### Function Arguments
+
+Sometimes, a function is written such that its first few arguments are reserved for specific inputs. For instance, we may omit the names of the first two inputs in the `ggplot()` function without issues,
+
+```{r, eval=FALSE}
+ggplot(ourdata, aes(x = xvar, y = yvar))
+```
+as the first argument is reserved for `data` and the second argument is reserved for `mapping`.
