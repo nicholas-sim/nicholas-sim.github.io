@@ -1,6 +1,4 @@
----
-layout: default
----
+
 
 ## ANL501 Data Visualisation and Storytelling 
 
