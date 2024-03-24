@@ -1,4 +1,4 @@
-I developed the  <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> programme at SUSS and served as the Head of Programme until 1 July 2024. Here are the courses I am teaching or have taught in the programme.
+I developed the  <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> programme at SUSS and served as the Head of Programme (until 1 July 2024). Here are the courses I am teaching or have taught in the programme.
 
 
 ---
