@@ -1,6 +1,6 @@
-title: Nicholas Sim
-logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
+title: Nicholas Sim's Teaching Page
+logo: https://scholar.googleusercontent.com/citations?view_op=view_photo&user=m7HG2YQAAAAJ&citpid=1
+description: This is my course page for ANL501 Data Visualisation and Storytelling
 show_downloads: true
-google_analytics:
+google_analytics: true
 theme: jekyll-theme-minimal
