@@ -1,6 +1,12 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.5/src/app/ci.min.css"
+/>
+
 title: Nicholas C. Sim
 logo: https://avatars.githubusercontent.com/u/66676750?v=4
 description: Applied Econometrics | Policy Evaluation | Trade and Development
+description: LinkedIn
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
