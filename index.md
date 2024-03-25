@@ -1,5 +1,4 @@
-Welcome! I am an economist by training and I teach at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I received my doctoral education from the  
-<a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a> and spent about 9 years as a faculty member at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore. I promised my students that I will create a github repository to keep my slide decks for their future reference if they are ever interested. 
+Welcome! I am an economist by training and I teach at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I received my doctoral education from the <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a> and spent about 9 years as a faculty member at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore. his page serves as a repository for students in my course who may wish to reference the materials in the future.
 
 
 ## Research
