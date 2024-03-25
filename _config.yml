@@ -6,7 +6,13 @@
 title: Nicholas C. Sim
 logo: https://avatars.githubusercontent.com/u/66676750?v=4
 description: Applied Econometrics | Policy Evaluation | Trade and Development
-description: LinkedIn
-show_downloads: true
+title: Nicholas C. Sim
+logo: https://avatars.githubusercontent.com/u/66676750?v=4
+description: Applied Econometrics | Policy Evaluation | Trade and Development
+minima:
+  social_links:
+    - { platform: github,  user_url: "https://github.com/nicholas-sim" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/nicholas-sim-450b771b" }
+show_downloads: 
 google_analytics:
 theme: jekyll-theme-minimal
