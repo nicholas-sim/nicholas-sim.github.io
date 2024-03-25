@@ -1,4 +1,4 @@
-I am a faculty at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I am an economist by training and received my doctoral education from the <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a>. I then spent about 9 years as a faculty at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore.
+I am a faculty at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I am an economist by training and received my doctoral education from the <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a>. Upon graduating, I spent about 9 years as a faculty at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore.
 
 
 ## Research
