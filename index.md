@@ -1,12 +1,10 @@
-Welcome! I am an economist by training and I teach at the <a style="font-weight:bold" href="https://www.suss.edu.sg/"> Singapore Univeristy of Social Sciences </a>. I received my doctoral education from the  
-<a style="font-weight:bold" href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a> and spent about 9 years as a faculty member at the <a style="font-weight:bold" href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore. I promised my students that I will create a github repository to keep my slide decks for their future reference if they are ever interested. 
+Welcome! I am an economist by training and I teach at the <a href="https://www.suss.edu.sg/"> Singapore Univeristy of Social Sciences </a>. I received my doctoral education from the  
+<a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a> and spent about 9 years as a faculty member at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore. I promised my students that I will create a github repository to keep my slide decks for their future reference if they are ever interested. 
 
-<br>
 ## Research
 
 I work mainly in applied econometrics. For a list of my more recent works, please visit my <a style="font-weight:bold" href="https://ideas.repec.org/f/psi516.html"> IDEAS </a> or <a style="font-weight:bold" href="https://scholar.google.com.au/citations?user=m7HG2YQAAAAJ&hl=en"> Google Scholar </a> page.
 
-<br>
 ## Teaching
 
 I developed the  <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> programme at SUSS and served as the Head of Programme (until 1 July 2024). Here are the courses I am teaching or have taught in the programme.
