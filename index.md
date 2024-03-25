@@ -2,7 +2,7 @@
 
 I work mainly in applied econometrics. For a list of my more recent works, please visit my <a style="font-weight:bold" href="https://ideas.repec.org/f/psi516.html"> IDEAS </a> or <a style="font-weight:bold" href="https://scholar.google.com.au/citations?user=m7HG2YQAAAAJ&hl=en"> Google Scholar </a> page.
 
----
+
 
 ## Teaching
 
