@@ -1,5 +1,6 @@
 title: Nicholas Sim
 logo: https://avatars.githubusercontent.com/u/66676750?v=4
-description: Welcome!
-google_analytics: true
+description: I am faculty member at the University of Adelaide.
+show_downloads: true
+google_analytics:
 theme: jekyll-theme-minimal
