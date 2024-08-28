@@ -1,4 +1,4 @@
-I am a faculty at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I am an economist by training and received my doctoral education from the <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a>. Upon graduating, I spent about 9 years as a faculty at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore.
+I am a faculty at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I am an economist by training and received my doctoral education from the <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a>. Upon graduating, I spent about 9 years as a faculty at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore. I am currently Deputy Director at the Centre of Applied Research, the office of research at SUSS, and formerly headed the <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> programmes.
 
 
 ## Research
@@ -8,7 +8,7 @@ I work mainly in applied econometrics. For a list of my more recent works, pleas
 
 ## Teaching
 
-I have had the opportunity to develop the  <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> at SUSS and served as the Head of Programme (until 1 July 2024). Here are the courses I am teaching or have taught in the programme.
+I headed the <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> at SUSS until 1 July 2024. I currently teach ANL501 Data Visualisation and Storytelling in the programme.
 
 
  <a  style="font-weight:bold" href="https://nicholas-sim.github.io/ANL501-Data-Visualisation-and-Storytelling/">ANL501 Data Visualisation and Storytelling</a>
@@ -16,5 +16,5 @@ I have had the opportunity to develop the  <a href="https://www.suss.edu.sg/prog
 This <a href="https://nicholas-sim.github.io/ANL501-Data-Visualisation-and-Storytelling/">course</a> focuses on creating data visualizations for storytelling with R as the primary tool. We will delve into the application of the _ggplot2_ package to construct various visualizations to present different data types, such as bar plots, dot plots, jitter plots, boxplots, line plots, area plots, path plots, tree maps, choropleth maps, and more. Emphasis will be placed on mastering the use of Grammar of Graphics to create data visualizations for effective storytelling, along with developing data preprocessing skills essential for achieving desired plots. Finally, we will explore the use of RMarkdown and data APIs for automating back-end data extraction, data wrangling, and analytics when crafting of reproducible reports.
 
 
- <a  style="font-weight:bold" href="#">ANL588 Applied Project</a>
-
+## Other Involvements
+Outside of work, I enjoy watching the Singapore Premier League (goals galore) and serve as a co-cathechist to eight lovely Primary 2 children (whom I occassionally resort to bribing them with chicken nuggests) at the <a href="https://sppchurch.org.sg/"> Church of St Peter and Paul </a>.
