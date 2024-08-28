@@ -1,4 +1,4 @@
-I am a faculty at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I am an economist by training and received my doctoral education from the <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a>. Upon graduating, I spent about 9 years as a faculty at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore. I am currently Deputy Director at the Centre of Applied Research, the office of research at SUSS, and formerly headed the <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> programmes.
+I am a faculty at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I am an economist by training and received my doctoral education from the <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a>. Upon graduating, I spent about 9 years as a faculty at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore. I am currently Deputy Director at the Centre of Applied Research, the office of research at SUSS, and formerly headed the <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> programmes. My former roles at Adelaide included PhD Program Chair and Faculty of Professions' Associate Dean of ICT.
 
 
 ## Research
@@ -8,8 +8,7 @@ I work mainly in applied econometrics. For a list of my more recent works, pleas
 
 ## Teaching
 
-I headed the <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> at SUSS until 1 July 2024. I currently teach ANL501 Data Visualisation and Storytelling in the programme.
-
+I currently teach ANL501 Data Visualisation and Storytelling in the MAVI programme. My slides can be found here in the link below.
 
  <a  style="font-weight:bold" href="https://nicholas-sim.github.io/ANL501-Data-Visualisation-and-Storytelling/">ANL501 Data Visualisation and Storytelling</a>
 
@@ -17,4 +16,5 @@ This <a href="https://nicholas-sim.github.io/ANL501-Data-Visualisation-and-Story
 
 
 ## Other Involvements
-Outside of work, I enjoy watching the Singapore Premier League (goals galore) and serve as a co-cathechist to eight lovely Primary 2 children (whom I occassionally resort to bribing them with chicken nuggests) at the <a href="https://sppchurch.org.sg/"> Church of St Peter and Paul </a>.
+
+Outside of work, I enjoy watching the Singapore Premier League and serve as a co-cathechist to eight lovely Primary 2 children at the <a href="https://sppchurch.org.sg/"> Church of St Peter and Paul </a>.
