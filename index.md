@@ -1,10 +1,20 @@
-I am a faculty at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I am an economist by training and received my doctoral education from the <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a>. Upon graduating, I spent about 9 years as a faculty at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, University of Adelaide </a> before returning to Singapore. I am the Director-designate at the <a href="[https://www.suss.edu.sg/programmes/detail/mavi](https://www.suss.edu.sg/about-suss/centres/centre-for-applied-research)">Centre of Applied Research</a> (starting this role on Jan 1, 2025), the office of research at SUSS, and I formerly headed the <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> programmes. My former roles at Adelaide included PhD Program Chair and Faculty of Professions' Associate Dean of ICT.
+I am a faculty at the <a href="https://www.suss.edu.sg/"> Singapore University of Social Sciences </a>. I am an economist by training and received my doctoral education from the <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> economics department at Boston College </a>. Upon graduating, I spent about 9 years as a faculty at the <a href="https://able.adelaide.edu.au/economics-and-public-policy/"> School of Economics, Adelaide University </a> before returning to Singapore. I am currently Assistant Provost (Research) and my former roles include Director, University Research Office, Head of the <a href="https://www.suss.edu.sg/programmes/detail/mavi">Master and Graduate Diploma in Analytics and Visualisation</a> programmes. My former roles at Adelaide included PhD Program Chair and Faculty of Professions' Associate Dean of ICT.
 
 
 ## Research
 
 I work mainly in applied econometrics. For a list of my more recent works, please visit my <a style="font-weight:bold" href="https://ideas.repec.org/f/psi516.html"> IDEAS </a> or <a style="font-weight:bold" href="https://scholar.google.com.au/citations?user=m7HG2YQAAAAJ&hl=en"> Google Scholar </a> page.
 
+For readers and referees, replication files for my recent papers can be found below:
+
+<ul>
+  <li>
+    <a style="font-weight:bold" href="https://nicholas-sim.github.io/Intergenerational-Support/">
+      Relational Context and the Well-being Effects of Intergenerational Support: 
+      Evidence from Older Parents in Singapore
+    </a>
+  </li>
+</ul>
 
 ## Teaching
 
