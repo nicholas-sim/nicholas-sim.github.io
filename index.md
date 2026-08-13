@@ -9,7 +9,7 @@ For readers and referees, replication files for my recent papers can be found be
 
 <ul>
   <li>
-    <a style="font-weight:bold" href="https://nicholas-sim.github.io/Intergenerational-Support/">
+    <a style="font-weight:bold" href="https://github.com/nicholas-sim/Intergenerational-Support">
       Relational Context and the Well-being Effects of Intergenerational Support: 
       Evidence from Older Parents in Singapore
     </a>
